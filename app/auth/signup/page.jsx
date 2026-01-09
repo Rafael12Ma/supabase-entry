@@ -35,7 +35,7 @@ export default function SignUpPage() {
       if (error) throw error;
       router.push("/auth/signup-success");
     } catch (error) {
-      setError(err instanceof Error ? err.message : "Signup Failed");
+    //   setError(err instanceof Error ? err.message : "Signup Failed");
     } finally {
       setLoading(false);
     }
