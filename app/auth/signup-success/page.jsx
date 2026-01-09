@@ -1,0 +1,30 @@
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Link from "next/link";
+
+export default function SignUpSuccessPage() {
+  return (
+    <>
+      <main className="min-h-screen bg-zinc-950 items-center flex justify-center px-4">
+        <Card
+          className={
+            "w-full max-w-md p-8 bg-zinc-900 border-zinc-800 text-center"
+          }
+        >
+          <h1 className="text-3xl font-bold text-emerald-400 mb-4">
+            Check your email
+          </h1>
+          <p className="text-zinc-400 mb-6">
+            We have send you a confirmation link. Please check your email to
+            verify your account.
+          </p>
+          <Link href="/auth/login">
+            <Button className="w-full cursor-pointer bg-emerald-600 hover:bg-emerald-700 ">
+              Back to Login
+            </Button>
+          </Link>
+        </Card>
+      </main>
+    </>
+  );
+}
