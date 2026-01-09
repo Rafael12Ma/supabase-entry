@@ -27,15 +27,14 @@ export default function SignUpPage() {
         email,
         password,
         options: {
-          emailRedirectTo:
-            process.env.NEXT_PUBLIC_SUPABASE_REDIRECT_URL ||
-            window.location.origin,
+          emailRedirectTo: process.env.NEXT_PUBLIC_SUPABASE_REDIRECT_URL,
+          // window.location.origin,
         },
       });
       if (error) throw error;
       router.push("/auth/signup-success");
     } catch (error) {
-    //   setError(err instanceof Error ? err.message : "Signup Failed");
+      //   setError(err instanceof Error ? err.message : "Signup Failed");
     } finally {
       setLoading(false);
     }
